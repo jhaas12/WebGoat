@@ -1,0 +1,43 @@
+---
+
+resources:
+  - name: webgoat-src
+    type: git
+    icon: github-circle
+    source:
+      uri: https://github.com/WebGoat/WebGoat.git 
+
+
+
+jobs:
+  - name: CxScanExample
+    public: true
+    plan:
+      - get: webgoat-src
+        trigger: true
+      - task: submit-scan
+        config:
+          platform: linux
+          image_resource:
+            type: registry-image
+            source: { repository: openjdk, tag: "8u212-jdk-stretch" }
+          inputs:
+            - name: webgoat-src 
+          run:
+            path: /bin/bash
+            args:
+              - -c
+              - |
+                wget https://download.checkmarx.com/8.9.0/Plugins/CxConsolePlugin-8.90.0.zip
+                unzip CxConsolePlugin-8.90.0.zip > /dev/null
+                chmod +x runCxConsole.sh
+                ./runCxConsole.sh Scan \
+                -CxServer http://9f178096.ngrok.io \
+                -CxUser admin \
+                -CxPassword Password!123 \
+                -ProjectName 'CxServer\SP\Company\Users\webgoat-java' \
+                -LocationType folder \
+                -LocationPath webgoat-src \
+                -ReportXML report-file.xml \
+                -Comment 'Launched from Concourse' \
+                -verbose 
