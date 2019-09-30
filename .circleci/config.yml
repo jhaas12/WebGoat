@@ -13,7 +13,7 @@ jobs:
           -CxServer http://ec2-18-223-196-193.us-east-2.compute.amazonaws.com 
           -CxUser admin 
           -CxPassword Password!123 
-          -ProjectName 'CxServer\Ford\EV\Hannah\webgoat-java' 
+          -ProjectName 'CxServer\SP\Company\Users\webgoat-java' 
           -LocationType folder 
           -LocationPath ~/project 
           -Comment 'Launched from Circle Ci' 
