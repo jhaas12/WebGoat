@@ -10,9 +10,9 @@ jobs:
        - run: unzip CxConsolePlugin-8.90.0.zip
        - run: chmod +x runCxConsole.sh
        - run: ./runCxConsole.sh Scan 
-          -CxServer https://136.2.48.100/cxwebclient/
+          -CxServer https://136.2.48.100
           -CxUser admin 
-          -CxPassword Password!123 
+          -CxPassword Password123! 
           -ProjectName 'CxServer\SP\Company\Users\webgoat-java' 
           -LocationType folder 
           -LocationPath ~/project 
