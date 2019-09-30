@@ -10,12 +10,12 @@ jobs:
        - run: unzip CxConsolePlugin-8.90.0.zip
        - run: chmod +x runCxConsole.sh
        - run: ./runCxConsole.sh Scan \
-       -CxServer https://136.2.48.100 \
-       -CxUser hkochend \
-       -CxPassword Hmfog192459! \
-       -ProjectName 'CxServer\Ford\EV\Hannah\webgoat-java' \
-       -LocationType folder \
-       -LocationPath ~/project \
-       -Comment 'Launched from Circle Ci' \
-       -verbose
+        -CxServer https://136.2.48.100 \
+        -CxUser hkochend \
+        -CxPassword Hmfog192459! \
+        -ProjectName 'CxServer\Ford\EV\Hannah\webgoat-java' \
+        -LocationType folder \
+        -LocationPath ~/project \
+        -Comment 'Launched from Circle Ci' \
+        -verbose
         
