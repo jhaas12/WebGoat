@@ -6,4 +6,8 @@ jobs:
        - image: circleci/openjdk:8-jdk-stretch-browsers-legacy
      steps:
        - checkout
-       - run: echo "A first hello"
+       - run: > 
+        wget https://download.checkmarx.com/8.9.0/Plugins/CxConsolePlugin-8.90.0.zip
+        unzip CxConsolePlugin-8.90.0.zip
+        chmod +x runCxConsole.sh
+        ./runCxConsole.sh Scan
