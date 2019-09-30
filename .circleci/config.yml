@@ -1,6 +1,6 @@
   
 version: 2
- jobs:
+jobs:
    build:
      docker:
        - image: circleci/openjdk:8-jdk-stretch-browsers-legacy
