@@ -10,9 +10,9 @@ jobs:
        - run: unzip CxConsolePlugin-8.90.0.zip
        - run: chmod +x runCxConsole.sh
        - run: ./runCxConsole.sh Scan 
-          -CxServer https://136.2.48.100 
-          -CxUser hkochend 
-          -CxPassword Hmfog192459! 
+          -CxServer http://ec2-18-223-196-193.us-east-2.compute.amazonaws.com 
+          -CxUser admin 
+          -CxPassword Password!123 
           -ProjectName 'CxServer\Ford\EV\Hannah\webgoat-java' 
           -LocationType folder 
           -LocationPath ~/project 
