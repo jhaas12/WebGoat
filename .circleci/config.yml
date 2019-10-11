@@ -13,7 +13,7 @@ jobs:
           -CxServer https://136.2.48.100
           -CxUser admin 
           -CxPassword Password123! 
-          -ProjectName 'CxServer\SP\Company\Users\webgoat-java' 
+          -ProjectName 'CxServer\Ford\EV\Hannah\webgoat-java' 
           -LocationType folder 
           -LocationPath ~/project 
           -Comment 'Launched from Circle Ci' 
