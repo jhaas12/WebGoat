@@ -16,6 +16,6 @@ jobs:
           -ProjectName 'CxServer\Ford\IT\Hannah\webgoat-java' 
           -LocationType folder 
           -LocationPath ~/project 
-          -Comment 'Launched from Circle Ci jh' 
+          -Comment 'Launched from Circle Ci' 
           -verbose
         
