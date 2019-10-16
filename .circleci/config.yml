@@ -10,7 +10,7 @@ jobs:
        - run: unzip CxConsolePlugin-8.90.0.zip
        - run: chmod +x runCxConsole.sh
        - run: ./runCxConsole.sh Scan 
-          -CxServer https://www.checkmarx.ford.com
+          -CxServer https://www-checkmarx.app.ford.com
           -CxUser admin 
           -CxPassword Password123! 
           -ProjectName 'CxServer\Ford\IT\Hannah\webgoat-java' 
